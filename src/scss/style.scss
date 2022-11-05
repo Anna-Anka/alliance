@@ -12,6 +12,9 @@
 @import './components/header';
 @import './components/footer';
 
+// * cards
+@import './components/cards/service-card';
+
 // * templates
 //@import './templates/stepper';
 //@import './templates/accordion';
@@ -20,3 +23,4 @@
 
 // * home
 @import './home/hero';
+@import './home/services';
