@@ -1,0 +1,73 @@
+/* stylelint-disable */
+
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-conatin {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+@mixin flex-all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-center-sb {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-v-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@mixin flex-column-sb {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@mixin subtitle {
+    @include adaptiv-value("font-size", 24, 20, 1);
+    font-weight: $fw-700;
+}
+
+@mixin image-set($pathToImage) {
+  background-image: url("#{$pathToImage}.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: image-set(
+    /* stylelint-disable-next-line function-comma-newline-after */
+    "#{$pathToImage}.avif"type("image/avif"),
+    "#{$pathToImage}.webp"type("image/webp"),
+    "#{$pathToImage}.jpg"type("image/jpg")
+  );
+}
+
+@mixin resize-img {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+

@@ -1,0 +1,96 @@
+body {
+	color: $dark-800;
+	font-weight: $fw-400;
+	font-size: 16px;
+	font-family: $montserrat, Arial, sans-serif;
+	line-height: 2;
+	background-color: $white;
+}
+
+.container {
+	width: 100%;
+	max-width: 1392px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 35px;
+	color: $white;
+	font-weight: $fw-700;
+	font-family: $inter;
+	line-height: 1.2;
+	text-transform: uppercase;
+	background-color: $green-400;
+	border-radius: 100px;
+	@include adaptiv-value('padding-top', 25, 20, 1);
+	@include adaptiv-value('padding-bottom', 25, 20, 1);
+	@include adaptiv-value('padding-right', 35, 25, 1);
+	@include adaptiv-value('padding-left', 35, 25, 1);
+
+	&--white {
+		color: $dark-800;
+		background-color: $white;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.disable-scroll {
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.logo {
+	display: inline-block;
+	width: 100%;
+	max-width: 204px;
+	height: 22px;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.title {
+	@include adaptiv-value('font-size', 60, 32, 1);
+	@include adaptiv-value('margin-bottom', 50, 30, 1);
+	font-weight: $fw-700;
+	font-family: $inter;
+}
