@@ -10,6 +10,7 @@
 
 // * components
 @import './components/header';
+@import './components/price-table';
 @import './components/footer';
 
 // * cards
@@ -27,6 +28,7 @@
 @import './home/services';
 @import './home/about';
 @import './home/order';
+@import './home/service';
 @import './home/why';
 @import './home/reviews';
 @import './home/contacts';
