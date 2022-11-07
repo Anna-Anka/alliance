@@ -12,13 +12,13 @@
 	&__content {
 		width: 100%;
 		max-width: 580px;
+        padding: 40px;
 		background-color: $grey-200;
         @include flex-all-center;
-        padding: 40px;
 
         @include mq(lg) {
-            max-width: 100%;
             justify-content: flex-start;
+            max-width: 100%;
             padding: 40px 30px;
         }
 	}
