@@ -1,0 +1,87 @@
+.why {
+    @include adaptiv-value("padding-bottom", 210, 60, 1);
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 60, 30, 1);
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__bg {
+        max-width: 434px;
+        width: 100%;
+        @include bg-cover;
+        margin-right: 30px;
+
+        @include mq(lg) {
+            display: none;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        gap: 30px;
+
+        @include mq(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        height: 335px;
+        background-color: $grey-200;
+        position: relative;
+        @include adaptiv-value("padding", 60, 30, 1);
+        @include adaptiv-value("padding-top", 175, 120, 1);
+
+        @include mq(md) {
+            min-height: 220px;
+            height: auto;
+        }
+
+        &::before {
+            content: "";
+            @include adaptiv-value("width", 90, 70, 1);
+            @include adaptiv-value("height", 90, 70, 1);
+            position: absolute;
+            @include bg-conatin;
+            left: 50%;
+            transform: translateX(-50%);
+            @include adaptiv-value("top", 70, 40, 1);
+        }
+
+        &--years {
+            &::before {
+                background-image: url('../img/why/years.svg');
+            }
+        }
+
+        &--clients {
+            &::before {
+                background-image: url('../img/why/clients.svg');
+            }
+        }
+
+        &--cars {
+            &::before {
+                background-image: url('../img/why/cars.svg');
+            }
+        }
+
+        &--installment {
+            &::before {
+                background-image: url('../img/why/installment.svg');
+            }
+        }
+    }
+
+    &__text {
+        @include line-clamp(4);
+        text-align: center;
+        @include subtitle;
+        line-height: 1.2;
+    }
+}
