@@ -1,2 +1,4 @@
-console.log('components');
+import { connectFunction } from "./components/_connect";
+
+connectFunction();
 
