@@ -39,8 +39,9 @@ burger()
 // import { enableScroll } from './templates/enable-scroll';
 
 // * Реализация модального окна
-//import GraphModal from 'graph-modal';
-// const modal = new GraphModal('modal');
+import GraphModal from 'graph-modal';
+const modalCall = new GraphModal();
+//const modalService = new GraphModal('graph-modal--service');
 
 // * Реализация табов
 //import GraphTabs from 'graph-tabs';

@@ -71,7 +71,7 @@
 	}
 
 	&__item {
-		@include adaptiv-value('width', 252, 200, 1);
+		@include adaptiv-value('width', 250, 200, 1);
 		font-weight: $fw-700;
 
 		&:not(:last-child) {
